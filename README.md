@@ -54,7 +54,7 @@ streamlit run src/app.py
 
 ## ☁️ Streamlit Cloud Deployment
 You can try the app online here:
-[**Live Demo on Streamlit Cloud**]([https://YOUR-USERNAME-spam-classifier.streamlit.app](https://spam-or-ham-spam-classifier.streamlit.app/))
+[**Live Demo on Streamlit Cloud**](https://spam-or-ham-spam-classifier.streamlit.app/)
 
 ## 📊 Dataset
 [UCI SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
