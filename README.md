@@ -59,12 +59,5 @@ You can try the app online here (replace with your link):
 ## 📊 Dataset
 [UCI SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
 
-## 🖼 Screenshots
-### Web App - Single Message
-![Single Message Screenshot](screenshots/single_message.png)
-
-### Web App - Batch Upload
-![Batch Upload Screenshot](screenshots/batch_upload.png)
-
 ## 📜 License
 MIT License
