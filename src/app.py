@@ -18,7 +18,7 @@ st.set_page_config(page_title="Spam SMS Classifier", page_icon="📩", layout="c
 st.sidebar.title("📌 About")
 st.sidebar.info(
     """
-    **Spam SMS Classifier**
+    **Spam or Ham SMS Classifier**
     
     Detects whether a message is spam or ham.
     
@@ -39,7 +39,7 @@ st.sidebar.write("📅 **Last Updated:** Aug 2025")
 
 # --- Main Title ---
 st.markdown(
-    "<h1 style='text-align: center;'>📩 Spam or Ham Classifier</h1>"
+    "<h1 style='text-align: center;'>📩 Spam or Ham SMS Classifier</h1>"
     "<p style='text-align: center;'>Classify single or multiple messages as spam or safe.</p>",
     unsafe_allow_html=True
 )
