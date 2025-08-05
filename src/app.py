@@ -34,7 +34,7 @@ st.sidebar.info(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.write("👨‍💻 **Author:** Your Name")
+st.sidebar.write("👨‍💻 **Author:** Ivan Lee")
 st.sidebar.write("📅 **Last Updated:** Aug 2025")
 
 # --- Main Title ---
