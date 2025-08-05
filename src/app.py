@@ -17,8 +17,11 @@ st.set_page_config(page_title="Spam SMS Classifier", page_icon="📩", layout="c
 st.sidebar.title("📌 About")
 st.sidebar.info(
     """
-    This is a **Machine Learning Spam Detector** trained on the
-    [UCI SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection).
+    **Spam SMS Classifier**
+    
+    This ML app detects whether a message is spam or ham.
+    
+    **Dataset:** [UCI SMS Spam Collection](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
     
     **Tech Stack:**
     - Python
@@ -34,8 +37,11 @@ st.sidebar.write("👨‍💻 **Author:** Your Name")
 st.sidebar.write("📅 **Last Updated:** Aug 2025")
 
 # --- Main Title ---
-st.markdown("<h1 style='text-align: center;'>📩 Spam SMS Classifier</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Enter an SMS message below to check if it's spam or safe.</p>", unsafe_allow_html=True)
+st.markdown(
+    "<h1 style='text-align: center;'>📩 Spam SMS Classifier</h1>"
+    "<p style='text-align: center;'>Check if an SMS is spam or safe.</p>",
+    unsafe_allow_html=True
+)
 
 # --- Input ---
 msg = st.text_area("✏️ Your Message:", height=120)
@@ -49,17 +55,24 @@ if st.button("🔍 Classify Message"):
         prob = model.predict_proba(msg_tfidf)[0][spam_index]
         label = "Spam" if prob >= threshold else "Ham"
 
-        # --- Styled Output ---
+        # --- Styled Output for Dark Mode ---
+        box_style = """
+            padding:15px; 
+            border-radius:10px; 
+            border: 2px solid;
+            margin-top:10px;
+        """
+
         if label == "Spam":
             st.markdown(
-                f"<div style='padding:15px; background-color:#ffcccc; border-radius:10px;'>"
+                f"<div style='{box_style} border-color:#ff4d4d;'>"
                 f"<h3>🚨 Prediction: Spam</h3>"
                 f"<p>Spam Probability: {prob:.2%}</p></div>",
                 unsafe_allow_html=True
             )
         else:
             st.markdown(
-                f"<div style='padding:15px; background-color:#ccffcc; border-radius:10px;'>"
+                f"<div style='{box_style} border-color:#4dff88;'>"
                 f"<h3>✅ Prediction: Ham</h3>"
                 f"<p>Spam Probability: {prob:.2%}</p></div>",
                 unsafe_allow_html=True
@@ -68,6 +81,7 @@ if st.button("🔍 Classify Message"):
 # --- Footer ---
 st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown(
-    "<p style='text-align: center; font-size: 12px;'>Built with ❤️ using Streamlit</p>",
+    "<p style='text-align: center; font-size: 12px; opacity: 0.7;'>"
+    "Built with ❤️ using Streamlit</p>",
     unsafe_allow_html=True
 )
