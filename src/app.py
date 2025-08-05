@@ -8,10 +8,12 @@ Spam SMS Classifier Web App
 
 import streamlit as st
 import joblib
+import os
 
 # Load model & vectorizer
-model = joblib.load("spam_classifier.pkl")
-vectorizer = joblib.load("vectorizer.pkl")
+base_path = os.path.dirname(__file__)
+model = joblib.load(os.path.join(base_path, "../spam_classifier.pkl"))
+vectorizer = joblib.load(os.path.join(base_path, "../vectorizer.pkl"))
 
 # Find spam index for probability
 spam_index = list(model.classes_).index("spam")
