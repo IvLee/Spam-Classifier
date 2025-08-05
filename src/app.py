@@ -39,7 +39,7 @@ st.sidebar.write("📅 **Last Updated:** Aug 2025")
 
 # --- Main Title ---
 st.markdown(
-    "<h1 style='text-align: center;'>📩 Spam SMS Classifier</h1>"
+    "<h1 style='text-align: center;'>📩 Spam or Ham Classifier</h1>"
     "<p style='text-align: center;'>Classify single or multiple messages as spam or safe.</p>",
     unsafe_allow_html=True
 )
