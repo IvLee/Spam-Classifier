@@ -8,7 +8,9 @@ A machine learning project that detects spam SMS messages using the UCI SMS Spam
 - Model comparison (Naive Bayes & Logistic Regression)
 - Saves best model to disk
 - CLI prediction tool
-- Streamlit web app for easy use
+- Streamlit web app for single & batch classification
+- Supports CSV, TXT, and Excel (.xlsx) batch uploads
+- Downloadable prediction results with original filename
 
 ## 📂 Project Structure
 ```
@@ -20,6 +22,8 @@ spam-classifier/
 │   ├── app.py               # Streamlit web app
 ├── requirements.txt
 ├── README.md
+├── spam_classifier.pkl      # Saved best model
+├── vectorizer.pkl           # Saved TF-IDF vectorizer
 ```
 
 ## ⚙️ Installation
@@ -30,23 +34,37 @@ pip install -r requirements.txt
 ```
 
 ## 🏋️‍♂️ Training the Model
+Run this to train the model and save it to disk:
 ```bash
 python src/train_model.py
 ```
 
 ## 🖥 CLI Prediction
+Run the interactive CLI classifier:
 ```bash
 python src/predict.py
 ```
-Type messages and get spam/ham predictions.
+Type messages and get spam/ham predictions instantly.
 
-## 🌐 Run the Web App
+## 🌐 Streamlit Web App (Local)
+Run the web app locally:
 ```bash
 streamlit run src/app.py
 ```
 
+## ☁️ Streamlit Cloud Deployment
+You can try the app online here (replace with your link):
+[**Live Demo on Streamlit Cloud**](https://YOUR-USERNAME-spam-classifier.streamlit.app)
+
 ## 📊 Dataset
 [UCI SMS Spam Collection Dataset](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
+
+## 🖼 Screenshots
+### Web App - Single Message
+![Single Message Screenshot](screenshots/single_message.png)
+
+### Web App - Batch Upload
+![Batch Upload Screenshot](screenshots/batch_upload.png)
 
 ## 📜 License
 MIT License
